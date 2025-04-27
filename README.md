@@ -2,6 +2,6 @@
   <br>
   <img width="600px" src="Mymix-Title.png"/>
   <br>
-  <span><b>A simple tool to get the weather of any place in the world.</b></span>
+  <span><b>A simple ASCII art generator built in Go</b></span>
   <br>
 </p>
