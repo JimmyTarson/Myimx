@@ -65,3 +65,16 @@ notepad "$env:USERPROFILE\AppData\Local\Programs\myimx\art\fish.md"
 ```bash
 myimx fish
 ```
+
+<a name="contribute"></a>
+## How to contribute
+
+1. Fork this repository
+2. Create a file `<art-name>.md` in the `./internal/art` directory
+3. Paste your ASCII art into that file and then commit the changes
+4. Start a pull request
+
+When the pull request is accepted you will be able to use your art:
+```bash
+myimx <art-name>
+```
