@@ -26,4 +26,4 @@ To install the latest version of __Myimx__ run:
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/JimmyTarson12/Myimx/main/install-myimx.ps1' -OutFile "$env:TEMP\install-myimx.ps1" -UseBasicParsing; Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:TEMP\install-myimx.ps1"
 ```
 
-To install a earlier version of Myimx run the [install-myimx.ps1]()
+To install a earlier version of Myimx run the [install-myimx.ps1](https://github.com/JimmyTarson12/Myimx/blob/main/install-myimx.ps1) script with a different
