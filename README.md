@@ -13,3 +13,10 @@
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
   <a href="#support">Support</a>
 </p>
+<br>
+
+<a name="installation"></a>
+## Installation
+> [!NOTE]
+> Myimx at its current version is only available to __windows__ users.
+> Support for MacOS / Linux will probably be available sometime in the future.
