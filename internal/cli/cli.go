@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/JimmyTarson12/Myimx/tree/main/internal/art"
+	"github.com/JimmyTarson/Myimx/tree/main/internal/art"
 )
 
 // ProcessCommand handles the user command
