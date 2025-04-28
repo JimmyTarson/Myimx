@@ -1,6 +1,6 @@
 # install-myimx.ps1
 $installDir = Join-Path $env:USERPROFILE 'AppData\Local\Programs\myimx'
-$exeUrl = 'https://github.com/JimmyTarson12/Myimx/releases/download/v1.1.2/myimx.exe'
+$exeUrl = 'https://github.com/JimmyTarson/Myimx/releases/download/v1.1.2/myimx.exe'
 
 # Create installation directory if it doesn't exist
 if(!(Test-Path $installDir)) {
