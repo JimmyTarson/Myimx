@@ -20,3 +20,10 @@
 > [!NOTE]
 > Myimx at its current version is only available to __windows__ users. <br>
 > Support for MacOS / Linux will probably be available sometime in the future.
+
+To install the latest version of __Myimx__ run:
+```powershell
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/JimmyTarson12/Myimx/main/install-myimx.ps1' -OutFile "$env:TEMP\install-myimx.ps1" -UseBasicParsing; Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:TEMP\install-myimx.ps1"
+```
+
+To install a earlier version of Myimx run the [install-myimx.ps1]()
