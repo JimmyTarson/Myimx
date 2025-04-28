@@ -18,5 +18,5 @@
 <a name="installation"></a>
 ## Installation
 > [!NOTE]
-> Myimx at its current version is only available to __windows__ users.
+> Myimx at its current version is only available to __windows__ users. <br>
 > Support for MacOS / Linux will probably be available sometime in the future.
