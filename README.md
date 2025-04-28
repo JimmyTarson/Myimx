@@ -78,3 +78,8 @@ When the pull request is accepted you will be able to use your art:
 ```bash
 myimx <art-name>
 ```
+
+## License
+
+MIT © Myimx<br/>
+Original Creator - [Jimmy Tarson](https://github.com/JimmyTarson12)
