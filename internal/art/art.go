@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	githubRawBaseURL = "https://raw.githubusercontent.com/JimmyTarson12/Myimx/refs/heads/main/internal/art"
+	githubRawBaseURL = "https://raw.githubusercontent.com/JimmyTarson/Myimx/refs/heads/main/internal/art"
 )
 
 // GetArt returns the ASCII art for the given key, or an empty string if not found
