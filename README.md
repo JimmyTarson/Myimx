@@ -23,14 +23,14 @@
 
 To install the latest version of __Myimx__ run:
 ```powershell
-Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/JimmyTarson12/Myimx/main/install-myimx.ps1' -OutFile "$env:TEMP\install-myimx.ps1" -UseBasicParsing; Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:TEMP\install-myimx.ps1"
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/JimmyTarson/Myimx/main/install-myimx.ps1' -OutFile "$env:TEMP\install-myimx.ps1" -UseBasicParsing; Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:TEMP\install-myimx.ps1"
 ```
 
-To install an earlier version of Myimx run the [install-myimx.ps1](https://github.com/JimmyTarson12/Myimx/blob/main/install-myimx.ps1) script with a different supported version in the `$exeUrl` variable
+To install an earlier version of Myimx run the [install-myimx.ps1](https://github.com/JimmyTarson/Myimx/blob/main/install-myimx.ps1) script with a different supported version in the `$exeUrl` variable
 
 <a name="usage"></a>
 ## Usage
-Print an ASCII art from [github](https://github.com/search?q=repo%3AJimmyTarson12%2FMyimx+path%3Ainternal%2Fart+path%3A*.md&type=code) or [locally](#local)
+Print an ASCII art from [github](https://github.com/search?q=repo%3AJimmyTarson%2FMyimx+path%3Ainternal%2Fart+path%3A*.md&type=code) or [locally](#local)
 ```bash
 myimx <art-name>
 ```
@@ -82,4 +82,4 @@ myimx <art-name>
 ## License
 
 MIT © Myimx<br/>
-Original Creator - [Jimmy Tarson](https://github.com/JimmyTarson12)
+Original Creator - [Jimmy Tarson](https://github.com/JimmyTarson)
