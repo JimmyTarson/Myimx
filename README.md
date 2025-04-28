@@ -11,7 +11,7 @@
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
   <a href="#usage">Usage</a>
   &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
-  <a href="#support">Support</a>
+  <a href="#contribute">Contribute</a>
 </p>
 <br>
 
@@ -27,3 +27,10 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/JimmyTarson12/Myimx/ma
 ```
 
 To install an earlier version of Myimx run the [install-myimx.ps1](https://github.com/JimmyTarson12/Myimx/blob/main/install-myimx.ps1) script with a different supported version in the `$exeUrl` variable
+
+<a name="usage"></a>
+## Usage
+Print an ASCII art from [github]() or [locally]()
+```bash
+myimx <art-name>
+```
