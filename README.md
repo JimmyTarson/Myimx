@@ -28,6 +28,13 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/JimmyTarson/Myimx/main
 
 To install an earlier version of Myimx run the [install-myimx.ps1](https://github.com/JimmyTarson/Myimx/blob/main/install-myimx.ps1) script with a different supported version in the `$exeUrl` variable
 
+### Uninstall Myimx
+
+To uninstall Myimx run:
+```powershell
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/JimmyTarson/Myimx/main/uninstall-myimx.ps1' -OutFile "$env:TEMP\uninstall-myimx.ps1" -UseBasicParsing; Set-ExecutionPolicy Bypass -Scope Process -Force; & "$env:TEMP\uninstall-myimx.ps1"
+```
+
 <a name="usage"></a>
 ## Usage
 Print an ASCII art from [github](https://github.com/search?q=repo%3AJimmyTarson%2FMyimx+path%3Ainternal%2Fart+path%3A*.md&type=code) or [locally](#local)
