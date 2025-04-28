@@ -42,3 +42,26 @@ Display all commands:
 ```bash
 myimx help
 ```
+
+<a name="local"></a>
+## Create your own ASCII art
+> [!WARNING]
+> This feature is in Beta, there may be issues
+
+1 Create a new Markdown file with your art:
+```powershell
+mkdir -Force "$env:USERPROFILE\AppData\Local\Programs\myimx\art"
+
+# Open it in notepad
+notepad "$env:USERPROFILE\AppData\Local\Programs\myimx\art\fish.md"
+```
+2 Add your ASCII art to the file:
+```
+><((°>
+```
+3 Save the file and close the editor
+
+4 Now you can use your new art:
+```bash
+myimx fish
+```
