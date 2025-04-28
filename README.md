@@ -30,7 +30,7 @@ To install an earlier version of Myimx run the [install-myimx.ps1](https://githu
 
 <a name="usage"></a>
 ## Usage
-Print an ASCII art from [github]() or [locally]()
+Print an ASCII art from [github](https://github.com/JimmyTarson12/Myimx/tree/main/internal/art) or [locally]()
 ```bash
 myimx <art-name>
 ```
