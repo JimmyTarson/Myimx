@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/JimmyTarson12/Myimx/internal/art"
+	"github.com/JimmyTarson12/Myimx/tree/main/internal/art"
 )
 
 func ProcessCommand(args []string) error {

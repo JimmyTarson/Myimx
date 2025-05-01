@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/JimmyTarson12/Myimx/internal/cli"
+	"github.com/JimmyTarson12/Myimx/tree/main/internal/cli"
 )
 
 func main() {
