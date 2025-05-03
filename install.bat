@@ -3,45 +3,20 @@ setlocal enabledelayedexpansion
 
 echo Installing myimx ASCII Art CLI Tool...
 
-:: Set version
-set VERSION=1.0.0
-
-:: Detect architecture
-set ARCH=amd64
-if "%PROCESSOR_ARCHITECTURE%"=="x86" set ARCH=386
-if "%PROCESSOR_ARCHITECTURE%"=="ARM64" set ARCH=arm64
-
 :: Set download URL
-set DOWNLOAD_URL=https://github.com/yourusername/myimx/releases/download/v%VERSION%/myimx_%VERSION%_windows_%ARCH%.zip
-
-:: Create temp directory
-set TEMP_DIR=%TEMP%\myimx_install
-if exist "%TEMP_DIR%" rd /s /q "%TEMP_DIR%"
-mkdir "%TEMP_DIR%"
-
-:: Download the zip file
-echo Downloading myimx v%VERSION% for Windows/%ARCH%...
-echo From: %DOWNLOAD_URL%
-
-powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri '%DOWNLOAD_URL%' -OutFile '%TEMP_DIR%\myimx.zip'"
-if %ERRORLEVEL% neq 0 (
-  echo Failed to download the file. Please check your internet connection and try again.
-  exit /b 1
-)
-
-:: Extract the zip
-echo Extracting...
-powershell -Command "Expand-Archive -Path '%TEMP_DIR%\myimx.zip' -DestinationPath '%TEMP_DIR%\extract'"
+set DOWNLOAD_URL=https://github.com/JimmyTarson12/Myimx/releases/download/v1.0.0/myimx.exe
 
 :: Create installation directory
 set INSTALL_DIR=%USERPROFILE%\AppData\Local\Programs\myimx
 if not exist "%INSTALL_DIR%" mkdir "%INSTALL_DIR%"
 
-:: Copy the binary
-echo Installing to %INSTALL_DIR%...
-copy "%TEMP_DIR%\extract\myimx.exe" "%INSTALL_DIR%"
+:: Download the executable directly
+echo Downloading myimx...
+echo From: %DOWNLOAD_URL%
+
+powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri '%DOWNLOAD_URL%' -OutFile '%INSTALL_DIR%\myimx.exe'"
 if %ERRORLEVEL% neq 0 (
-  echo Failed to copy the file. Please ensure you have permission to write to %INSTALL_DIR%.
+  echo Failed to download the file. Please check your internet connection and try again.
   exit /b 1
 )
 
@@ -54,9 +29,6 @@ if %ERRORLEVEL% neq 0 (
   setx PATH "%PATH%;%INSTALL_DIR%"
   set "PATH_UPDATED=yes"
 )
-
-:: Clean up
-rd /s /q "%TEMP_DIR%"
 
 echo.
 echo ✅ Installation complete!
