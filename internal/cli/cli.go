@@ -9,6 +9,7 @@ import (
 	"github.com/JimmyTarson12/Myimx/tree/main/internal/art"
 )
 
+// ProcessCommand handles the user command
 func ProcessCommand(args []string) error {
 	if len(args) == 0 {
 		return fmt.Errorf("no command provided")
@@ -21,23 +22,27 @@ func ProcessCommand(args []string) error {
 		PrintUsage()
 		return nil
 	case "list":
-		ListAllArt()
+		ListAvailableArt()
 		return nil
 	default:
 		return PrintRequestedArt(command)
 	}
 }
 
+// PrintUsage displays help information
 func PrintUsage() {
 	fmt.Println("Usage: myimx <command>")
 	fmt.Println("Available commands:")
 	fmt.Println("  list - Shows all available ASCII art options")
 	fmt.Println("  help - Shows this help message")
 	fmt.Println("  <art-name> - Displays the specified ASCII art")
+	fmt.Println("\nNeed more ASCII art? Just ask for it!")
+	fmt.Println("If the art is available in our GitHub repository, it will be automatically downloaded.")
 }
 
-func ListAllArt() {
-	fmt.Println("All ASCII art:")
+// ListAvailableArt displays all available ASCII art options
+func ListAvailableArt() {
+	fmt.Println("Available ASCII art:")
 
 	artNames := art.GetAvailableArt()
 	sort.Strings(artNames)
@@ -45,12 +50,16 @@ func ListAllArt() {
 	for _, name := range artNames {
 		fmt.Printf("  - %s\n", name)
 	}
+
+	fmt.Println("\nTip: If you want art that's not listed here, try running 'myimx <name>' anyway.")
+	fmt.Println("If it exists in our GitHub repository, it will be automatically downloaded.")
 }
 
+// PrintRequestedArt displays the requested ASCII art
 func PrintRequestedArt(name string) error {
 	asciiArt, exists := art.GetArt(name)
 	if !exists {
-		return fmt.Errorf("unknown art: %s\nUse 'myimx list' to see available options", name)
+		return fmt.Errorf("unknown art: %s\n\nUse 'myimx list' to see available options,\nor check our GitHub repository for more art: https://github.com/JimmyTarson12/Myimx/tree/main/internal/art", name)
 	}
 
 	fmt.Println(asciiArt)
