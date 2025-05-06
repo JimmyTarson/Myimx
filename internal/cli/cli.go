@@ -36,8 +36,6 @@ func PrintUsage() {
 	fmt.Println("  list - Shows all available ASCII art options")
 	fmt.Println("  help - Shows this help message")
 	fmt.Println("  <art-name> - Displays the specified ASCII art")
-	fmt.Println("\nNeed more ASCII art? Just ask for it!")
-	fmt.Println("If the art is available in our GitHub repository, it will be automatically downloaded.")
 }
 
 // ListAvailableArt displays all available ASCII art options
@@ -59,7 +57,7 @@ func ListAvailableArt() {
 func PrintRequestedArt(name string) error {
 	asciiArt, exists := art.GetArt(name)
 	if !exists {
-		return fmt.Errorf("unknown art: %s\n\nUse 'myimx list' to see available options,\nor check our GitHub repository for more art: https://github.com/JimmyTarson12/Myimx/tree/main/internal/art", name)
+		return fmt.Errorf("unknown art: %s\nUse 'myimx list' to see available options", name)
 	}
 
 	fmt.Println(asciiArt)
