@@ -48,9 +48,6 @@ func ListAvailableArt() {
 	for _, name := range artNames {
 		fmt.Printf("  - %s\n", name)
 	}
-
-	fmt.Println("\nTip: If you want art that's not listed here, try running 'myimx <name>' anyway.")
-	fmt.Println("If it exists in our GitHub repository, it will be automatically downloaded.")
 }
 
 // PrintRequestedArt displays the requested ASCII art
